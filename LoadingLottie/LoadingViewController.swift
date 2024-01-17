@@ -13,6 +13,8 @@ class LoadingViewController: UIViewController {
     
     @IBOutlet weak var dowlandCentrView: UIView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //addAnimateLotLoading()
@@ -21,7 +23,7 @@ class LoadingViewController: UIViewController {
 
     
     func addAnimeLottie() {
-        let animeDowlandView = LottieAnimationView(name: "lf20_mtexymuy")
+        let animeDowlandView = LottieAnimationView(name: "12345 (2)")
         animeDowlandView.contentMode = .scaleAspectFill
         animeDowlandView.frame = self.dowlandCentrView.bounds
         //animeDowlandView.loopMode = .loop

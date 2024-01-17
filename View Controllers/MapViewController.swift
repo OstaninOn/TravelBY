@@ -4,7 +4,7 @@
 //
 //  Created by  aleksandr on 16.01.24.
 //
-
+import Lottie
 import Foundation
 import CoreLocation
 import MapKit
@@ -19,6 +19,9 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     //
     // MARK: - IBOutlets
     //
+    
+    @IBOutlet weak var pulseNavigation: UIView!
+    
     
     @IBOutlet weak var searchButtunCastom: UIButton!
     
@@ -223,7 +226,8 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         locationManager.requestWhenInUseAuthorization()
 
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(rotateMe), userInfo: nil, repeats: true)
-       
+        addAnimateLotLoading()
+        //addAnimeLottie()
         
 //        searchButtunCastom.layer.shadowRadius = 10
 //        searchButtunCastom.layer.shadowOffset = .zero
@@ -248,9 +252,27 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         } else {
             locationManager.startUpdatingLocation()
         }
-    
+        //addAnimateLotLoading()
+        //addAnimeLottie()
     }
 
+        func addAnimateLotLoading() {
+            let animeLoadView = LottieAnimationView(name: "lf20_8BYzaH")
+            animeLoadView.contentMode = .scaleAspectFill
+            animeLoadView.frame = self.pulseNavigation.bounds
+            animeLoadView.loopMode = .loop
+            animeLoadView.play()
+            self.pulseNavigation.addSubview(animeLoadView)
+        }
+    
+//    func addAnimeLottie() {
+//        let animeDowlandView = LottieAnimationView(name: "lf20_8BYzaH")
+//        animeDowlandView.contentMode = .scaleAspectFill
+//        animeDowlandView.frame = self.pulseNavigation.bounds
+//        animeDowlandView.loopMode = .loop
+//       
+//    }
+    
     @objc func rotateMe() {
             angle = angle + 10
             userPinView?.transform = CGAffineTransformMakeRotation( CGFloat( (Double(angle) / 360.0) * 1 ) )
