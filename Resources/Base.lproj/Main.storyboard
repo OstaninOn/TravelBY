@@ -139,7 +139,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pne-dz-qHB">
-                                <rect key="frame" x="0.0" y="108" width="393" height="650"/>
+                                <rect key="frame" x="0.0" y="108" width="393" height="637"/>
                                 <standardMapConfiguration key="preferredConfiguration" elevationStyle="realistic" showsTraffic="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="25"/>
@@ -150,21 +150,19 @@
                             </mapView>
                             <toolbar clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXg-fz-n1y">
                                 <rect key="frame" x="171.66666666666666" y="763" width="50" height="50"/>
-                                <color key="backgroundColor" name="RayGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DmN-iu-vc8"/>
                                     <constraint firstAttribute="width" constant="50" id="QYu-XO-6ai"/>
                                     <constraint firstAttribute="width" secondItem="QXg-fz-n1y" secondAttribute="height" multiplier="1:1" id="eeJ-4T-ZTF"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3ae-Vk-IIM">
-                                        <color key="tintColor" name="RayGreen"/>
+                                    <barButtonItem style="done" systemItem="flexibleSpace" id="3ae-Vk-IIM">
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="15"/>
                                         </userDefinedRuntimeAttributes>
                                     </barButtonItem>
-                                    <barButtonItem title="Item" image="location" catalog="system" id="Gtp-5U-8XV">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <barButtonItem title="Item" image="LocationIcon" id="Gtp-5U-8XV">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="22"/>
                                         </userDefinedRuntimeAttributes>
@@ -174,7 +172,6 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="BE9-tD-Hv8"/>
                                 </items>
-                                <color key="tintColor" name="RayGreen"/>
                                 <color key="barTintColor" name="RayGreen"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="25"/>
@@ -226,18 +223,25 @@
                                     <action selector="mapTyoesStandart:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Y7w-Vq-kbG"/>
                                 </connections>
                             </button>
+                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="409-Wy-Xrq">
+                                <rect key="frame" x="155.66666666666666" y="755" width="82.333333333333343" height="77"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6An-W3-y0x"/>
                         <color key="backgroundColor" name="RayGreen"/>
                         <constraints>
+                            <constraint firstItem="409-Wy-Xrq" firstAttribute="top" secondItem="6An-W3-y0x" secondAttribute="top" constant="652" id="24B-hs-I08"/>
                             <constraint firstItem="6An-W3-y0x" firstAttribute="bottom" secondItem="QXg-fz-n1y" secondAttribute="bottom" constant="5" id="6Ww-oA-jXP"/>
                             <constraint firstItem="pne-dz-qHB" firstAttribute="leading" secondItem="6An-W3-y0x" secondAttribute="leading" id="Ajj-dk-6JQ"/>
                             <constraint firstItem="r2N-z6-usp" firstAttribute="trailing" secondItem="6An-W3-y0x" secondAttribute="trailing" constant="-5" id="IoI-c2-jwE"/>
+                            <constraint firstItem="409-Wy-Xrq" firstAttribute="leading" secondItem="6An-W3-y0x" secondAttribute="leading" constant="155.5" id="Ufa-4T-9Xw"/>
+                            <constraint firstItem="6An-W3-y0x" firstAttribute="trailing" secondItem="409-Wy-Xrq" secondAttribute="trailing" constant="155" id="Xf6-2s-HmC"/>
                             <constraint firstItem="2lJ-1M-ttL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6An-W3-y0x" secondAttribute="leading" symbolic="YES" id="YtA-yK-BCE"/>
                             <constraint firstItem="pne-dz-qHB" firstAttribute="top" secondItem="6An-W3-y0x" secondAttribute="top" constant="5" id="ZFf-9A-0Yv"/>
+                            <constraint firstAttribute="bottom" secondItem="409-Wy-Xrq" secondAttribute="bottom" constant="20" id="bV7-6P-n7a"/>
                             <constraint firstItem="2lJ-1M-ttL" firstAttribute="trailing" secondItem="6An-W3-y0x" secondAttribute="trailing" constant="-5" id="djL-eO-rwH"/>
                             <constraint firstItem="QXg-fz-n1y" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="iVJ-vN-IUj"/>
-                            <constraint firstItem="QXg-fz-n1y" firstAttribute="top" secondItem="pne-dz-qHB" secondAttribute="bottom" constant="5" id="kcy-Nh-zvs"/>
+                            <constraint firstItem="QXg-fz-n1y" firstAttribute="top" secondItem="pne-dz-qHB" secondAttribute="bottom" constant="18" id="kcy-Nh-zvs"/>
                             <constraint firstItem="2lJ-1M-ttL" firstAttribute="top" secondItem="6An-W3-y0x" secondAttribute="top" constant="60" id="nKA-K1-cnD"/>
                             <constraint firstItem="6An-W3-y0x" firstAttribute="trailing" secondItem="pne-dz-qHB" secondAttribute="trailing" id="qri-L8-aSF"/>
                             <constraint firstItem="r2N-z6-usp" firstAttribute="top" secondItem="2lJ-1M-ttL" secondAttribute="bottom" constant="5" id="sfK-dy-Ihu"/>
@@ -261,13 +265,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="pne-dz-qHB" id="kSG-YB-jMS"/>
+                        <outlet property="pulseNavigation" destination="409-Wy-Xrq" id="48Q-Qg-91x"/>
                         <outlet property="searchButtunCastom" destination="2lJ-1M-ttL" id="WMi-Nh-ynY"/>
                         <segue destination="3CP-XK-uYk" kind="show" identifier="NewEntry" id="gm6-v2-64C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141.5999999999999" y="510.49475262368821"/>
+            <point key="canvasLocation" x="1141.2213740458014" y="509.85915492957747"/>
         </scene>
         <!--Add New Entry-->
         <scene sceneID="SJk-ED-soP">
@@ -438,9 +443,9 @@ UHJvc3RveSBBV1gAA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-au-hvl">
-                                <rect key="frame" x="0.0" y="241" width="393" height="370"/>
+                                <rect key="frame" x="0.0" y="-1.6666666666666856" width="393" height="855.33333333333348"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="370" id="eHJ-dS-8Dw"/>
+                                    <constraint firstAttribute="height" constant="855" id="eHJ-dS-8Dw"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -588,10 +593,10 @@ UHJvc3RveSBBV1gAA
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="IconUncategorized" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="LocationIcon" width="30" height="30"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="icons8-double-down-50" width="25" height="25"/>
         <image name="icons8-gallery-100-2" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="location" catalog="system" width="128" height="119"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="mappin.and.ellipse" catalog="system" width="110" height="128"/>
